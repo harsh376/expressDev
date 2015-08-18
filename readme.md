@@ -2,11 +2,11 @@
 
 1. Install node dependencies 
 
-`npm install`
+  `npm install` 
 
 2. Install front-end dependencies
 
-`cd app`
+  `cd app`
 
-`bower install`
+  `bower install`
 
