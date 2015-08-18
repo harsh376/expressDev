@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/services.js"></script>
+
+    </head>
+    <body>
+        <!-- testing the filter -->
+        <div ng-controller="updateFieldCtrl">
+            <input type="number" ng-model="name"/>
+            <p>Hello, {{getName() | reverse}}</p>
+        </div>
+
+        <hr>
+
+        <!-- testing submit() function in controller -->
+        <div ng-controller="resetCtrl">
+            <label>Reset Colors</label>
+            <input type="checkbox" ng-model="resetColors">
+            <button ng-click="submit()">Submit</button>
+            <br>
+            <tt>{{result}}</tt>
+        </div>
+
+        <hr>
+
+        <!-- testing DOM manipulation through directive -->
+        <div ng-controller="testDirectiveCtrl">
+            <input type="text" ng-model="something">
+            <br>
+            <display-something val="something"></display-something>
+        </div>
+
+        <hr>
+
+        <div ng-controller="testTranscludeCtrl">
+            <test-transclude>{{val}}</test-transclude>
+        </div>
+
+
+        <hr>
+
+    </body>
+</html>
