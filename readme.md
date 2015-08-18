@@ -9,4 +9,8 @@
   `cd app`
 
   `bower install`
+  
+3. Run server
+
+  `node server.js`
 
